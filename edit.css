@@ -1,0 +1,308 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    width: 100%;
+    background: #9648d6;
+    position: relative;
+    font-family: roboto, sans-serif;
+  }
+  
+  .navbar {
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0 4%;
+    background: #9648d6;
+    z-index: 9;
+    display: flex;
+    align-items: center;
+  }
+  
+  .brand-logo {
+    margin-left: 150px;
+    height: 90px;
+    width: 110px;
+  }
+  
+  .nav-links {
+    margin-top: 10px;
+    display: flex;
+    list-style: none;
+  }
+  
+  .nav-items a {
+    text-decoration: none;
+    margin-left: 5px;
+    text-transform: capitalize;
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    padding-right: 15px;
+  }
+  
+  .right-container {
+    display: block;
+    margin-left: auto;
+  }
+  
+  .search-box {
+    border: none;
+    border-bottom: 2px solid rgb(255, 255, 255);
+    background: transparent;
+    outline: none;
+    height: 30px;
+    color: rgb(255, 255, 255);
+    width: 250px;
+    text-transform: capitalize;
+    font-size: 20px;
+    font-weight: 500;
+    transition: 0.5s;
+  }
+  
+  .search-box:focus {
+    width: 400px;
+    border-color: rgb(255, 255, 255);
+  }
+  
+  .sub-btn {
+    background: rgb(0, 0, 0);
+    height: 30px;
+    padding: 0 20px;
+    color: #fff;
+    border-radius: 2px;
+    border: none;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 12px;
+    margin: 0 10px;
+  }
+  
+  .login-link {
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    font-weight: 700;
+    text-decoration: none;
+  }
+  
+  .carousel-container {
+    position: relative;
+    width: 100%;
+    height: 450px;
+    padding: 20px 0;
+    overflow-x: hidden;
+    margin-top: 80px;
+  }
+  
+  .carousel {
+    display: flex;
+    width: 92%;
+    height: 100%;
+    position: relative;
+    margin: auto;
+  }
+  
+  .slider {
+    flex: 0 0 auto;
+    margin-right: 30px;
+    position: relative;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    transition: 1s;
+    overflow: hidden;
+  }
+  
+  .slider img {
+    width: 70%;
+    min-height: 100%;
+    object-fit: cover;
+    display: block;
+    margin-left: auto;
+  }
+  
+  .slide-content {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    z-index: 2;
+    background: linear-gradient(to right, #28093d 80%, #4d146a00);
+    color: #fff;
+  }
+  
+  .movie-title {
+    padding-left: 50px;
+    text-transform: capitalize;
+    margin-top: 80px;
+  }
+  
+  .movie-des {
+    width: 80%;
+    line-height: 30px;
+    padding-left: 50px;
+    margin-top: 30px;
+    opacity: 0.8;
+  }
+  
+  .video-card-container {
+    position: relative;
+    width: 92%;
+    margin: auto;
+    height: 10vw;
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: space-between;
+  }
+  
+  .video-card {
+    position: relative;
+    min-width: calc(100% / 5 - 10px);
+    width: calc(100% / 5 - 10px);
+    height: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+    background: rgb(81, 14, 91);
+  }
+  
+  .video-card-image,
+  .card-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .card-video {
+    position: absolute;
+  }
+  
+  .video-card:hover .video-card-image {
+    display: none;
+  }
+  
+  .title {
+    color: rgb(255, 255, 255);
+    opacity: 0.9;
+    padding-left: 4%;
+    text-transform: capitalize;
+    font-size: 25px;
+    font-weight: 500;
+  }
+  
+  .movies-list {
+    width: 100%;
+    height: 220px;
+    position: relative;
+    margin: 10px 0 20px;
+  }
+  
+  .card-container {
+    position: relative;
+    width: 92%;
+    padding-left: 10px;
+    height: 220px;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    overflow-x: auto;
+    overflow-y: visible;
+    scroll-behavior: smooth;
+  }
+  
+  .card-container::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .card {
+    position: relative;
+    min-width: 150px;
+    width: 150px;
+    height: 200px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-right: 10px;
+    transition: 0.5s;
+  }
+  
+  .card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .card:hover {
+    transform: scale(1.1);
+  }
+  
+  .card:hover .card-body {
+    opacity: 1;
+  }
+  
+  .card-body {
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background: linear-gradient(to bottom, #28093d, #4d146a00 90%);
+    padding: 10px;
+    transition: 0.5s;
+  }
+  
+  .name {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: capitalize;
+    margin-top: 60%;
+  }
+  
+  .des {
+    color: #fff;
+    opacity: 0.8;
+    margin: 5px 0;
+    font-weight: 500;
+    font-size: 12px;
+  }
+  .pre-btn,
+  .nxt-btn {
+    position: absolute;
+    top: 0;
+    width: 5%;
+    height: 100%;
+    z-index: 2;
+    border: none;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  .pre-btn {
+    left: 0;
+    background: linear-gradient(to right, #28093d 0%, #4d146a00);
+  }
+  
+  .nxt-btn {
+    right: 0;
+    background: linear-gradient(to left, #28093d 0%, #4d146a00);
+  }
+  
+  .pre-btn img,
+  .nxt-btn img {
+    width: 15px;
+    height: 20px;
+    opacity: 0;
+  }
+  
+  .pre-btn:hover img,
+  .nxt-btn:hover img {
+    opacity: 1;
+  }
+  
